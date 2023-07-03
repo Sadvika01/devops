@@ -1,0 +1,28 @@
+import java.util.StringTokenizer;
+
+public class IntegerTokenizer {
+    public static void main(String[] args) {
+        // Read the line of integers
+        String input = "10 20 30 40 50"; // Replace this with your input line
+
+        // Create a StringTokenizer object with space as the delimiter
+        StringTokenizer tokenizer = new StringTokenizer(input);
+
+        int sum = 0;
+        while (tokenizer.hasMoreTokens()) {
+            String token = tokenizer.nextToken();
+
+            // Convert the token to an integer
+            int number = Integer.parseInt(token);
+
+            // Display the integer
+            System.out.println("Integer: " + number);
+
+            // Add the integer to the sum
+            sum += number;
+        }
+
+        // Display the sum of all integers
+        System.out.println("Sum: " + sum);
+    }
+}
